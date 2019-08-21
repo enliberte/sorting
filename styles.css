@@ -1,0 +1,45 @@
+.button {
+    position: relative;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid green;
+    color: green;
+}
+.button:active {
+    color: gray;
+    background: #eee;
+}
+.button > .arrows {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    padding: 8px 10px;
+    padding-right: 30px;
+}
+.button > input {
+    display: none;
+}
+#stateInput:hover + .arrows:after,
+#stateInput:hover + .arrows:before {
+    content: ' ';
+    position: absolute;
+    right: 10px;
+    border: 10px solid transparent;
+}
+#stateInput:hover + .arrows:after {
+    bottom: -6px;
+    border-top: 10px solid green;
+    border-width: 12px 7px;
+}
+#stateInput:hover + .arrows:before {
+    top: -6px;
+    border-bottom: 10px solid gray;
+    border-width: 12px 7px;
+}
+#stateInput:checked + .arrows:before {
+    border-bottom-color: green;
+}
+#stateInput:checked + .arrows:after {
+    border-top-color: gray;
+}
